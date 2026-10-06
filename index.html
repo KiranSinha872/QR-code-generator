@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <meta name="description" content="Generate a QR code for any URL instantly. Paste a link and download your QR code as a PNG image." />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <main class="card">
+      <h1 class="title">QR Code Generator</h1>
+      <p class="subtitle">Paste a URL and get a scannable QR code.</p>
+
+      <div class="input-row">
+        <input
+          id="url-input"
+          type="text"
+          placeholder="https://example.com"
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="URL input"
+        />
+        <button id="generate-btn">Generate</button>
+      </div>
+
+      <p id="error-msg" class="error" aria-live="polite"></p>
+
+      <div id="qr-wrapper" class="qr-wrapper hidden">
+        <div id="qr-output"></div>
+        <a id="download-btn" class="download-btn" download="qr-code.png">
+          Download image
+        </a>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
